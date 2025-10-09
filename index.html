@@ -1,42 +1,84 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Movie Database</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Tristan Wede Lind — SPA</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/variables.css">
+    <script src="js/script.js" defer></script>
 </head>
 
 <body>
-    <header class="page-header">
-        <h1 class="page-title">The Movie Database</h1>
+    <a class="skip-link" href="#main">Spring til indhold</a>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="brand">
+                <img src="assets/images/portrait.jpg" alt="Tristan portræt" class="brand-img">
+                <div class="brand-text">
+                    <h1>Tristan Wede Lind</h1>
+                    <p class="tagline">Web Developer and Author</p>
+                </div>
+            </div>
+
+            <nav class="main-nav" aria-label="Hovednavigation">
+                <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">☰</button>
+                <ul id="nav-list" class="nav-list">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#work">Books</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <nav class="main-nav">
-        <ul>
-            <li><a href="#">Now Playing</a></li>
-            <li><a href="#">Popular</a></li>
-            <li><a href="#">Top Rated</a></li>
-            <li><a href="#">Upcoming</a></li>
-        </ul>
-    </nav>
+    <main id="main" class="container">
+        <section id="hero" class="section section-hero is-active">
+            <!-- Hero (knap, titel) -->
+            <div class="hero-inner">
+                <button class="cta">NEW RELEASE</button>
+                <h2 class="book-title">Advanced PHP: From Zero to Hero</h2>
+                <p class="meta">© 2023 KEA Publishing</p>
+            </div>
+        </section>
 
-    <main>
-     
+        <div class="content-grid">
+            <section id="about" class="section about is-active">
+                <!-- dine tekster med paragraph-->
+                <p>...lang tekst om Tristan ...</p>
+                <blockquote class="testimonial">
+                    <p>Tristan Wede Lind's books ...</p>
+                    <cite>The Tech Tribune</cite>
+                </blockquote>
+            </section>
+
+            <aside class="aside books">
+                <!-- grid med bogomslag -->
+                <div class="book-grid">
+                    <figure class="book">
+                        <img src="assets/images/book1.jpg" alt="CSS for Developers">
+                        <figcaption>CSS for Developers — 2022</figcaption>
+                    </figure>
+                    <!-- gentag for flere bøger -->
+                </div>
+            </aside>
+        </div>
+
+        <section id="contact" class="section contact">
+            <!-- kontaktinfo eller on tour -->
+            <h3>On tour</h3>
+            <!-- etc -->
+        </section>
     </main>
 
-    <template id="movie-template">
-      
-    </template>
-
-
-    <footer class="page-footer">
-        <p>&copy; 2025 Tristan Wede Lind assignment - Sophie Teinvig Kjer</p>
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 Tristan Wede Lind assignment - Sophie Teinvig Kjer</p>
+        </div>
     </footer>
-
-    <script src="javascript/script.js"></script>
 </body>
 
 </html>
