@@ -147,6 +147,52 @@ body {
   margin-top: 0.3rem;
 }
 
+/* =========================
+   TOUR SECTION
+   ========================= */
+.tour {
+  padding: var(--space-l) 0;
+}
+
+.tour h3 {
+  font-size: 1.6rem;
+  margin-bottom: var(--space-m);
+  text-align: center;
+  color: var(--colorBgBlack);
+}
+
+.tour-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-m);
+}
+
+.tour-card {
+  border-bottom: 1px solid var(--colorBgBlack);
+  padding-bottom: var(--space-s);
+}
+
+.tour-card:last-child {
+  border-bottom: none;
+}
+
+.tour-card .date {
+  font-weight: bold;
+  color: var(--colorBgBlack);
+}
+
+.tour-card h4 {
+  font-size: 1.1rem;
+  margin: 0.3rem 0;
+  color: var(--colorBgBlack);
+}
+
+.tour-card .role {
+  font-style: italic;
+  color: var(--colorBgBlack);
+  opacity: 0.7;
+}
+
 /* FOOTER */  
 .site-footer {
   margin-top: var(--space-l);
@@ -154,6 +200,7 @@ body {
   background: var(--colorBgWhite);
   text-align: center;
 }
+
 
 /* TABLET / DESKTOP */
 @media (min-width: 48rem) {
@@ -221,6 +268,35 @@ body {
 
   .book-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   TOUR - DESKTOP
+   ========================= */
+@media (min-width: 48rem) {
+  .tour-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-l);
+  }
+
+  .tour-card {
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    background: var(--colorBgWhite);
+    padding: var(--space-m);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .tour-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .tour-card h4 {
+    font-size: 1.2rem;
   }
 }
 
