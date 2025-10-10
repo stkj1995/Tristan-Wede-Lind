@@ -101,7 +101,10 @@ body {
 .books h3 {
   font-size: 1.6rem;
   margin-bottom: var(--space-m);
-  text-align: center;
+  text-align: left;
+  background-color: var(--colorBgBlue);
+  color: var(--colorBgYellow);
+  padding: 1rem;
 }
 
 .book-grid {
@@ -154,7 +157,10 @@ body {
 .tour h3 {
   font-size: 1.6rem;
   margin-bottom: var(--space-m);
-  text-align: center;
+  text-align: left;
+  background-color: var(--colorBgBlue);
+  color: var(--colorBgYellow);
+  padding: 1rem;
 }
 
 .tour-grid {
@@ -206,7 +212,10 @@ body {
 .contact h3 {
   font-size: 1.6rem;
   margin-bottom: var(--space-m);
-  text-align: center;
+  text-align: left;
+  background-color: var(--colorBgBlue);
+  color: var(--colorBgYellow);
+  padding: 1rem;
 }
 
 /* GRID */
@@ -302,6 +311,27 @@ body {
   width: 100%;
   height: auto;
   border-radius: 0.5rem;
+}
+
+/* IMAGE ABOVE CONTACT CARDS */
+.contact-top-img {
+  display: flex;
+  justify-content: flex-start; /* desktop: align left */
+  margin-bottom: var(--space-l);
+}
+
+.contact-top-img img {
+  width: 150px;
+  height: auto;
+  border-radius: 50%;
+}
+
+/* MOBILE: center the image */
+@media (max-width: 48rem) {
+  .contact-top-img {
+    display: flex;
+    justify-content: center; /* center on mobile */
+  }
 }
 
 /* FOOTER */
@@ -413,6 +443,7 @@ body {
     flex: 1;
   }
 }
+
 
 /* LARGE DESKTOP */
 @media (min-width: 90rem) {
