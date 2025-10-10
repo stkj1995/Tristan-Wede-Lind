@@ -193,50 +193,138 @@
             <div class="container">
                 <h3>Books</h3>
                 <div class="book-grid">
-                    <figure>
+                    <div class="book-card">
                         <img src="assets/images/book_css.png" alt="Advanced PHP: From Zero to Hero">
-                        <figcaption><strong>Advanced PHP:</strong> From Zero to Hero (2023)</figcaption>
-                    </figure>
-                    <figure>
+                        <div class="book-text">
+                            <h4>Advanced PHP</h4>
+                            <p class="subtitle">From Zero to Hero (2023)</p>
+                            <p>"Advanced PHP: From Zero to Hero" is a groundbreaking book that unlocks the full
+                                potential of PHP programming. With meticulous detail, Lind guides readers through
+                                advanced concepts, empowering them to master complex topics such as object-oriented
+                                programming, database integration, and secure web application development. This
+                                comprehensive guide is a must-have for aspiring PHP developers seeking to elevate their
+                                skills to heroic heights.</p>
+                        </div>
+                    </div>
+
+                    <div class="book-card">
                         <img src="assets/images/book_css.png" alt="CSS for Developers">
-                        <figcaption><strong>CSS for Developers:</strong> A Visual Journey (2022)</figcaption>
-                    </figure>
-                    <!-- Tilføj flere bøger -->
+                        <div class="book-text">
+                            <h4>CSS for Developers</h4>
+                            <p class="subtitle">A Visual Journey (2022)</p>
+                            <p>This work offers an immersive exploration of CSS that transcends mere syntax. Through
+                                vivid illustrations and practical examples, Lind demystifies the intricacies of CSS,
+                                equipping developers with the tools to craft stunning, responsive designs. This visual
+                                masterpiece is an indispensable companion for developers seeking to elevate their CSS
+                                skills and create visually captivating websites.</p>
+                        </div>
+                    </div>
+
+                    <div class="book-card">
+                        <img src="assets/images/book_css.png" alt="Advanced JavaScript: Frameworkless">
+                        <div class="book-text">
+                            <h4>Advanced JavaScript</h4>
+                            <p class="subtitle">Frameworkless (2021)</p>
+                            <p>In "Advanced JavaScript: Frameworkless," Tristan Wede Lind revolutionizes the approach to
+                                JavaScript development. Breaking free from the confines of frameworks, Lind delves into
+                                the core principles and advanced techniques that empower developers to create robust,
+                                scalable, and framework-independent JavaScript applications. This essential guide
+                                unveils the true potential of JavaScript, transforming developers into true masters of
+                                the language.</p>
+                        </div>
+                    </div>
+
+                    <div class="book-card">
+                        <img src="assets/images/book_css.png" alt="Basic Programming: Algorithms and Beyond">
+                        <div class="book-text">
+                            <h4>Basic Programming</h4>
+                            <p class="subtitle">Algorithms and Beyond (2017)</p>
+                            <p>A definitive guide that demystifies the fundamentals of programming. With clarity and
+                                precision, Lind introduces readers to essential concepts such as variables, loops, and
+                                conditionals, while also delving into the world of algorithms. This comprehensive
+                                resource equips aspiring programmers with the foundational knowledge needed to embark on
+                                a successful coding journey.</p>
+                        </div>
+                    </div>
+
+                    <div class="book-card">
+                        <img src="assets/images/book_css.png" alt="Basic JavaScript: Tweaking the Web">
+                        <div class="book-text">
+                            <h4>Basic JavaScript</h4>
+                            <p class="subtitle">Tweaking the Web (2017)</p>
+                            <p>"Basic JavaScript" is a transformative book that demystifies the building blocks of
+                                JavaScript. With practical examples and step-by-step instructions, Lind empowers readers
+                                to enhance websites with interactive elements and dynamic functionalities. This
+                                essential guide unlocks the power of JavaScript, enabling readers to tweak the web and
+                                create engaging user experiences.</p>
+                        </div>
+                    </div>
+
+                    <div class="book-card">
+                        <img src="assets/images/book_css.png" alt="Front-End Web Development: A Nice Introduction">
+                        <div class="book-text">
+                            <h4>Front-End Web Development</h4>
+                            <p class="subtitle">A Nice Introduction (2016)</p>
+                            <p>Tristan Wede Lind crafts a captivating journey into the world of front-end development.
+                                Lind artfully introduces readers to HTML, CSS, and JavaScript, unraveling the secrets of
+                                creating visually stunning and interactive websites. With its approachable style and
+                                comprehensive coverage, this book is the perfect starting point for aspiring front-end
+                                developers.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-
+        
         <!-- Contact -->
         <section id="contact" class="contact">
             <div class="container">
                 <h3>Contact</h3>
+
                 <div class="contact-grid">
-                    <div>
+                    <div class="contact-card">
                         <h4>Publishing</h4>
-                        <p><strong>Victoria Marsh</strong><br>
+                        <p>
+                            <strong>Victoria Marsh</strong><br>
                             Editor<br>
                             <a href="mailto:victoriamarsh@keapublishing.com">victoriamarsh@keapublishing.com</a><br>
                             (+44) 079 7502 0028
                         </p>
                     </div>
-                    <div>
+
+                    <div class="contact-card">
                         <h4>Agent</h4>
-                        <p><strong>Elly Houthuijzen</strong><br>
+                        <p>
+                            <strong>Elly Houthuijzen</strong><br>
                             Agent<br>
                             <a href="mailto:elly@houthuijzen.com">elly@houthuijzen.com</a><br>
                             (+31) 06-42821232
                         </p>
                     </div>
                 </div>
+
+                <form class="contact-form">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your email" required>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Write your message..."
+                        required></textarea>
+
+                    <button type="submit" class="btn-submit">Send Message</button>
+                </form>
             </div>
         </section>
-    </main>
 
-    <footer class="site-footer">
-        <div class="container">
-            <p>&copy; 2025 Tristan Wede Lind — Design by Sophie Teinvig Kjer</p>
-        </div>
-    </footer>
+
+        <footer class="site-footer">
+            <div class="container">
+                <p>&copy; 2025 Tristan Wede Lind — Design by Sophie Teinvig Kjer</p>
+            </div>
+        </footer>
 </body>
 
 </html>
