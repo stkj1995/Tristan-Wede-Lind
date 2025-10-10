@@ -287,6 +287,23 @@ body {
   color: var(--colorBgBlack);
 }
 
+/* CONTACT WRAPPER */
+.contact-wrapper {
+  display: flex;
+  flex-direction: column; /* mobile: stack */
+  gap: var(--space-l);
+}
+
+.contact-img {
+  display: none;
+}
+
+.contact-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
 /* FOOTER */
 .site-footer {
   margin-top: var(--space-l);
@@ -376,6 +393,24 @@ body {
 
   .tour-card img {
     margin-bottom: var(--space-s);
+  }
+}
+
+/* img at desktop */
+@media (min-width: 48rem) {
+  .contact-wrapper {
+    flex-direction: row;
+    gap: var(--space-l);
+    align-items: flex-start;
+  }
+
+  .contact-left {
+    flex: 1;
+  }
+
+  .contact-img {
+    display: block; /* only shows on desktop */
+    flex: 1;
   }
 }
 
