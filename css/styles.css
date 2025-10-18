@@ -402,6 +402,7 @@ body {
 
 /* Tablet & Desktop */
 @media (min-width: 48rem) {
+
   .site-footer {
     .footer-inner {
       flex-direction: row; 
@@ -444,6 +445,18 @@ body {
     .footer-bottom {
       text-align: center;
       margin-top: 2rem;
+    }
+  }
+
+  /* CONTACT – Tablet & Desktop */
+  .contact {
+    .contact-top-img {
+      justify-content: left; /* Venstrestilles igen på tablet/desktop */
+      margin-bottom: var(--space-l);
+
+      img {
+        width: 180px;
+      }
     }
   }
 }
