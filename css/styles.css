@@ -20,7 +20,6 @@ body {
 .container {
   width: min(1100px, 94%);
   margin: 0 auto;
-  padding: var(--space-m) 0;
 }
 
 /* ---------------- HEADER ---------------- */
@@ -216,7 +215,8 @@ body {
   }
 
   .contact-wrapper {
-    display: flex;
+    position: relative;
+    display: block;
     flex-direction: column;
     gap: var(--space-l);
 
@@ -228,7 +228,6 @@ body {
         margin-bottom: var(--space-l);
 
         .contact-card {
-          border: 1px solid var(--colorBgYellow);
           padding-bottom: var(--space-m);
 
           h4 {
@@ -254,17 +253,22 @@ body {
         flex-direction: column;
         gap: var(--space-s);
         border: 1px solid var(--colorBgBlack);
+        border-radius: 0.5rem;
         padding-top: var(--space-m);
+        padding: 1rem;
+        margin-top:3rem;
 
         label {
-          font-weight: bold;
+          font-weight: 400;
         }
 
         .request-booking {
         border: none;
         padding: 0.6rem var(--space-m);
-        font-weight: bold;
+        /* font-weight: bold; */
         background-color: var(--colorBgCream);
+        position: absolute;
+        top: 50rem;
       }
 
         input,
@@ -289,7 +293,7 @@ body {
           padding: 0.7rem 1.2rem;
           border-radius: 0.4rem;
           cursor: pointer;
-          font-weight: bold;
+          font-weight: 400;
           align-self: flex-start;
 
           &:hover {
@@ -465,7 +469,7 @@ body {
     .contact {
       .contact-grid {
         .contact-card {
-          border: 1px solid var(--colorBgBlack);
+          border: 1px solid var(--colorBgYellow);
           border-radius: 0.5rem;
           padding: var(--space-m);
           background-color: var(--colorBgCream);
@@ -489,11 +493,7 @@ body {
       }
 
       .request-booking {
-        border: 1px solid var(--colorBgBlack);
-        border-radius: 0.5rem 0.5rem 0 0;
-        border-bottom: none;
         padding: 0.6rem var(--space-m);
-        font-weight: bold;
         background-color: var(--colorBgCream);
       }
     }
