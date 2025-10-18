@@ -1,5 +1,6 @@
 @import "variables.css";
 
+/* ---------------- GLOBAL ---------------- */
 * {
   box-sizing: border-box;
 }
@@ -108,19 +109,15 @@ body {
   }
 
   .book-grid {
-    display: flex;
-    flex-direction: column;
     gap: var(--space-l);
 
     .book-card {
       display: flex;
       flex-direction: column;
-      border-bottom: 1px solid var(--colorBgBlack);
+      border: 0.1rem solid var(--colorBgYellow);
+      border-radius: 1rem;
+      background-color: var(--colorBgCream);
       padding-bottom: var(--space-m);
-
-      &:last-child {
-        border-bottom: none;
-      }
 
       img {
         width: 150px;
@@ -215,20 +212,23 @@ body {
   }
 
   .contact-wrapper {
-    position: relative;
-    display: block;
+    display: flex;
     flex-direction: column;
     gap: var(--space-l);
 
     .contact-left {
+      flex: 1;
+
       .contact-grid {
         display: flex;
         flex-direction: column;
         gap: var(--space-l);
-        margin-bottom: var(--space-l);
 
         .contact-card {
-          padding-bottom: var(--space-m);
+          padding: var(--space-m);
+          border-radius: 0.5rem;
+          border: 1px solid var(--colorBgYellow);
+          background-color: var(--colorBgCream);
 
           h4 {
             margin-bottom: 0.3rem;
@@ -254,22 +254,21 @@ body {
         gap: var(--space-s);
         border: 1px solid var(--colorBgBlack);
         border-radius: 0.5rem;
-        padding-top: var(--space-m);
-        padding: 1rem;
-        margin-top:3rem;
+        padding: var(--space-m);
+        background-color: var(--colorBgCream);
+        position: relative;
 
         label {
           font-weight: 400;
         }
 
         .request-booking {
-        border: none;
-        padding: 0.6rem var(--space-m);
-        /* font-weight: bold; */
-        background-color: var(--colorBgCream);
-        position: absolute;
-        top: 50rem;
-      }
+          padding: 0.6rem var(--space-s);
+          background-color: var(--colorBgCream);
+          position: relative;
+          font-size: 1.1rem;
+          margin-bottom: var(--space-s);
+        }
 
         input,
         textarea {
@@ -289,7 +288,6 @@ body {
           margin-top: var(--space-s);
           background: var(--colorBgLightGrey);
           color: var(--colorBgBlack);
-          border: 0.2%;
           padding: 0.7rem 1.2rem;
           border-radius: 0.4rem;
           cursor: pointer;
@@ -305,7 +303,7 @@ body {
     }
 
     .contact-img {
-      display:none;
+      display: none;
 
       img {
         width: 100%;
@@ -353,47 +351,35 @@ body {
       &.left {
         .mobile {
           display: flex;
-          flex-direction: row;
-          align-items: center;
+          flex-direction: column;
+          align-items: flex-start;
           gap: 0.5rem;
-
-          .footer-logo {
-            width: 100px;
-          }
-
-          .footer-kea {
-            color: var(--colorBgWhite);
-          }
         }
 
         .social-icons {
           display: flex;
-          justify-content: center;
+          justify-content: flex-start;
           gap: 0.5rem;
-          margin-top: 0.5rem;
-
-          img {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-          }
         }
       }
 
       &.center {
         display: flex;
         flex-direction: column;
+        align-items: center;
+        text-align: center;
         gap: 0.4rem;
       }
 
       &.right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        text-align: right;
+
         p {
           line-height: 1.3;
           margin: 0.3rem 0;
-          a {
-            color: var(--colorBgWhite);
-            text-decoration: underline;
-          }
         }
       }
     }
@@ -401,101 +387,119 @@ body {
 
   .footer-bottom {
     font-size: 0.9rem;
-    margin-top: 1.5rem;
+    margin-top: 2rem;
+    text-align: center;
   }
 }
 
 /* ---------------- MEDIA QUERIES ---------------- */
 
-/* Tablet & Desktop */
-@media (min-width: 48rem) {
+/* Tablet and above (min-width: 768px) */
+@media (min-width: 768px) {
   body {
-    margin-left: 10rem;
-    margin-right: 10rem;
-    background-color: var(--colorBgWhite);
-  } 
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
 
   main {
     background-color: var(--colorBgCream);
   }
 
-  .site-footer {
-    .footer-inner {
-      flex-direction: row; 
-      justify-content: space-between;
-      align-items: flex-start;
-      text-align: left;
-      gap: 2rem;
+  /* HERO */
+  .hero-inner {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    align-items: center;
+  }
 
-      .footer-col {
-        flex: 1;
-      }
+  .hero-inner-img img.book-cover {
+    width: 200px;
+  }
 
-      .footer-col.left {
-        align-items: flex-start;
-
-        .mobile {
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start; 
-          text-align: left;
-          margin-bottom: 0.6rem; 
-        }
-
-        .social-icons {
-          justify-content: flex-start;
-        }
-      }
-
-      .footer-col.center {
-        align-items: center;
-        text-align: center;
-      }
-
-      .footer-col.right {
-        align-items: flex-end;
-        text-align: right;
-      }
+    /* BOOKS GRID */
+    .book-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* 2 columns */
+      grid-auto-rows: auto;                 /* height based on content */
+      gap: var(--space-s);                  /* space between items */
     }
 
-    .footer-bottom {
-      text-align: center;
-      margin-top: 2rem;
+    .book-card {
+      gap:0rem;
+      margin: 1rem;
+      display: flex;                        /* ensure horizontal layout */
+      flex-direction: row-reverse;          /* image on right if desired */
+      align-items: center;
+      border: 1px solid #ddd;
+      border-radius: 0.5rem;
+      padding: var(--space-m);
+    }
+
+    .book-card img {
+      width: 150px;
+      margin-bottom: 0;
+      margin-left: var(--space-m);
+    } 
+
+  /* TOUR GRID */
+  .tour-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-m);
+  }
+
+  /* CONTACT */
+  .contact-wrapper {
+    flex-direction: row;
+    gap: var(--space-l);
+    align-items: flex-start;
+  }
+
+  .contact-left {
+    flex: 1;
+  }
+
+  .contact-img {
+    display: block;
+    flex: 1;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+
+  .contact-top-img {
+    justify-content: flex-start;
+
+    img {
+      width: 180px;
     }
   }
 
-  /* CONTACT – Tablet & Desktop */
-  @media (min-width: 48rem) {
-    .contact {
-      .contact-grid {
-        .contact-card {
-          border: 1px solid var(--colorBgYellow);
-          border-radius: 0.5rem;
-          padding: var(--space-m);
-          background-color: var(--colorBgCream);
-        }
-      }
+  /* HEADER NAV */
+  .site-header .main-nav .nav-list {
+    flex-direction: row;
+    gap: 1rem;
+  }
 
-      .contact-top-img {
-        justify-content: left;
-        margin-bottom: var(--space-l);
+  /* FOOTER */
+  .site-footer .footer-inner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+ }
 
-        img {
-          width: 180px;
-        }
-      }
+/* Large desktop (min-width: 1440px / 90rem) */
+@media (min-width: 90rem) {
+  .container {
+    width: 1200px;
+  }
 
-      .contact-form {
-        border: 1px solid var(--colorBgBlack);
-        border-radius: 0.5rem;
-        padding: var(--space-m);
-        background-color: var(--colorBgCream);
-      }
-
-      .request-booking {
-        padding: 0.6rem var(--space-m);
-        background-color: var(--colorBgCream);
-      }
-    }
+  body {
+    margin-left: 10rem;
+    margin-right: 10rem;
+    background-color: var(--colorBgWhite);
   }
 }
