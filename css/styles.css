@@ -253,12 +253,19 @@ body {
         display: flex;
         flex-direction: column;
         gap: var(--space-s);
-        border-top: 1px solid var(--colorBgBlack);
+        border: 1px solid var(--colorBgBlack);
         padding-top: var(--space-m);
 
         label {
           font-weight: bold;
         }
+
+        .request-booking {
+        border: none;
+        padding: 0.6rem var(--space-m);
+        font-weight: bold;
+        background-color: var(--colorBgCream);
+      }
 
         input,
         textarea {
@@ -294,7 +301,7 @@ body {
     }
 
     .contact-img {
-      display: none;
+      display:none;
 
       img {
         width: 100%;
@@ -398,6 +405,15 @@ body {
 
 /* Tablet & Desktop */
 @media (min-width: 48rem) {
+  body {
+    margin-left: 10rem;
+    margin-right: 10rem;
+    background-color: var(--colorBgWhite);
+  } 
+
+  main {
+    background-color: var(--colorBgCream);
+  }
 
   .site-footer {
     .footer-inner {
