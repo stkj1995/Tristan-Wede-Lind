@@ -228,12 +228,8 @@ body {
         margin-bottom: var(--space-l);
 
         .contact-card {
-          border-bottom: 1px solid var(--colorBgBlack);
+          border: 1px solid var(--colorBgYellow);
           padding-bottom: var(--space-m);
-
-          &:last-child {
-            border-bottom: none;
-          }
 
           h4 {
             margin-bottom: 0.3rem;
@@ -280,9 +276,9 @@ body {
 
         .btn-submit {
           margin-top: var(--space-s);
-          background: var(--colorBgPurple);
-          color: var(--colorBgWhite);
-          border: none;
+          background: var(--colorBgLightGrey);
+          color: var(--colorBgBlack);
+          border: 0.2%;
           padding: 0.7rem 1.2rem;
           border-radius: 0.4rem;
           cursor: pointer;
@@ -449,13 +445,40 @@ body {
   }
 
   /* CONTACT – Tablet & Desktop */
-  .contact {
-    .contact-top-img {
-      justify-content: left; /* Venstrestilles igen på tablet/desktop */
-      margin-bottom: var(--space-l);
+  @media (min-width: 48rem) {
+    .contact {
+      .contact-grid {
+        .contact-card {
+          border: 1px solid var(--colorBgBlack);
+          border-radius: 0.5rem;
+          padding: var(--space-m);
+          background-color: var(--colorBgCream);
+        }
+      }
 
-      img {
-        width: 180px;
+      .contact-top-img {
+        justify-content: left;
+        margin-bottom: var(--space-l);
+
+        img {
+          width: 180px;
+        }
+      }
+
+      .contact-form {
+        border: 1px solid var(--colorBgBlack);
+        border-radius: 0.5rem;
+        padding: var(--space-m);
+        background-color: var(--colorBgCream);
+      }
+
+      .request-booking {
+        border: 1px solid var(--colorBgBlack);
+        border-radius: 0.5rem 0.5rem 0 0;
+        border-bottom: none;
+        padding: 0.6rem var(--space-m);
+        font-weight: bold;
+        background-color: var(--colorBgCream);
       }
     }
   }
