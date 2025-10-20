@@ -159,9 +159,9 @@ body {
   .tour-img {
     img {
       width: 100%;    
-      max-width: 300px; 
+      max-width: 300px auto; 
       display: block;
-      margin: 0 auto;   
+      padding: 1.5rem ;   
     }
   }
 
@@ -172,7 +172,7 @@ body {
     .tour-card {
       display: flex;
       flex-direction: column;
-      border-bottom: 1px solid var(--colorBgBlack);
+      border-bottom: 1px solid var(--colorBgYellow);
       padding-bottom: var(--space-m);
       padding: 1rem;
 
@@ -247,7 +247,7 @@ body {
 
 /* ---------------- BOOKS ---------------- */
 .books {
-  padding: var(--space-l) 0;
+  padding: 0;
 
   h3 {
     font-size: 1.6rem;
@@ -264,10 +264,11 @@ body {
     .book-card {
       display: flex;
       flex-direction: column;
-      border: 0.1rem solid var(--colorBgYellow);
-      border-radius: 1rem;
+      border-bottom: 0.1rem solid var(--colorBgYellow);
+      border-radius: 0rem;
       background-color: var(--colorBgCream);
       padding-bottom: var(--space-m);
+      padding: 1rem;
 
       img {
         width: 150px;
@@ -530,8 +531,8 @@ body {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    border: 1px solid #ddd;
-    border-radius: 0.5rem;
+    border: 1px solid var(--colorBgYellow);
+    border-radius: 0.8rem;
     padding: var(--space-m);
   }
 
