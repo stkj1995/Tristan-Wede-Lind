@@ -142,6 +142,89 @@ body {
   }
 }
 
+
+/* ---------------- TOUR ---------------- */
+.tour {
+  padding: 0;
+
+  h3 {
+    font-size: 1.6rem;
+    margin-bottom: var(--space-m);
+    text-align: left;
+    background-color: var(--colorBgBlue);
+    color: var(--colorBgYellow);
+    padding: 1rem;
+  }
+
+  .tour-img {
+    img {
+      width: 100%;    
+      max-width: 300px; 
+      display: block;
+      margin: 0 auto;   
+    }
+  }
+
+  .tour-grid {
+    gap: var(--space-l) 1rem;
+    padding: 1rem;
+
+    .tour-card {
+      display: flex;
+      flex-direction: column;
+      border-bottom: 1px solid var(--colorBgBlack);
+      padding-bottom: var(--space-m);
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      .icon-text {
+        display: flex;
+        align-items: center;  
+        gap: 0.5rem;       
+        margin-bottom: 0.5rem; 
+
+        .microphone {
+          img {
+            width: 1.2rem;   
+            height: 1.2rem;
+            display: block;
+          }
+        }
+
+        p.date {
+          margin: 0;
+        }
+      }
+
+      img {
+        width: 100%;
+        border-radius: 0.4rem;
+        margin-bottom: var(--space-s);
+      }
+
+      .tour-text {
+        h4 {
+          font-size: 1.2rem;
+          margin: 0.3rem 0;
+          color: var(--colorBgBlue);
+        }
+
+        .subtitle {
+          font-weight: bold;
+          margin-bottom: var(--space-s);
+        }
+
+        p {
+          margin-bottom: 0.5rem;
+          line-height: 1.6;
+        }
+      }
+    }
+  }
+}
+
 /* ---------------- BOOKS ---------------- */
 .books {
   padding: var(--space-l) 0;
@@ -194,67 +277,6 @@ body {
   }
 }
 
-/* ---------------- TOUR ---------------- */
-.tour {
-  padding:0;
-
-  h3 {
-    font-size: 1.6rem;
-    margin-bottom: var(--space-m);
-    text-align: left;
-    background-color: var(--colorBgBlue);
-    color: var(--colorBgYellow);
-    padding: 1rem;
-  }
-
-  .tour-img {
-    img {
-      width: 100%;    
-      max-width: 300px auto; 
-      display: block;
-      margin: 0 auto;   
-    }
-  }
-
-  .tour-grid {
-    gap: var(--space-l);
-
-    .tour-card {
-      display: flex;
-      flex-direction: column;
-      border-bottom: 1px solid var(--colorBgBlack);
-      padding-bottom: var(--space-m);
-
-      &:last-child {
-        border-bottom: none;
-      }
-
-      img {
-        width: 100%;
-        border-radius: 0.4rem;
-        margin-bottom: var(--space-s);
-      }
-
-      .tour-text {
-        h4 {
-          font-size: 1.2rem;
-          margin: 0.3rem 0;
-          color: var(--colorBgBlack);
-        }
-
-        .subtitle {
-          font-weight: bold;
-          margin-bottom: var(--space-s);
-        }
-
-        p {
-          margin-bottom: 0.5rem;
-          line-height: 1.6;
-        }
-      }
-    }
-  }
-}
 
 /* ---------------- CONTACT ---------------- */
 .contact {
