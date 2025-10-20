@@ -361,6 +361,7 @@ body {
       }
 
       .contact-form {
+        width: 100%;
         display: flex;
         flex-direction: column;
         gap: var(--space-s);
@@ -368,7 +369,7 @@ body {
         border-radius: 0.5rem;
         padding: var(--space-m);
         background-color: var(--colorBgCream);
-        position: relative;
+        /* position: relative; */
 
         label {
           font-weight: 400;
@@ -506,7 +507,6 @@ body {
 
 
 /* ---------------- MEDIA QUERIES ---------------- */
-
 /* Tablet and above (min-width: 768px) */
 @media (min-width: 768px) {
   body {
@@ -524,10 +524,10 @@ body {
     justify-content: space-between;
     text-align: left;
     align-items: center;
-  }
 
-  .hero-inner-img img.book-cover {
-    width: 200px;
+    .hero-inner-img img.book-cover {
+      width: 200px;
+    }
   }
 
   .book-grid {
@@ -535,27 +535,27 @@ body {
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: auto;
     gap: var(--space-s);
-  }
 
-  .book-card {
-    gap: 0rem;
-    margin: 1rem;
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    border: 1px solid var(--colorBgYellow);
-    border-radius: 0.8rem;
-    padding: var(--space-m);
+    .book-card {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      gap: 0rem;
+      margin: 1rem;
+      border: 1px solid var(--colorBgYellow);
+      border-radius: 0.8rem;
+      padding: var(--space-m);
 
-    &::after {
-      content: none !important;
+      &::after {
+        content: none !important;
+      }
+
+      img {
+        width: 150px;
+        margin-bottom: 0;
+        margin-left: var(--space-m);
+      }
     }
-  }
-
-  .book-card img {
-    width: 150px;
-    margin-bottom: 0;
-    margin-left: var(--space-m);
   }
 
   .tour-grid {
@@ -564,61 +564,80 @@ body {
     grid-template-rows: repeat(7, auto);
     gap: var(--space-m);
   }
+  
+    .contact-wrapper {
+      flex-direction: row;
+      gap: var(--space-l);
+      align-items: flex-start;
 
-  .contact-wrapper {
-    flex-direction: row;
-    gap: var(--space-l);
-    align-items: flex-start;
-  }
+      .contact-left {
+        flex: 2; 
 
-  .contact-left {
-    flex: 1;
-  }
+        .contact-grid {
+          .contact-card {
+            border-radius: 0.8rem;
+            padding: var(--space-m);
+          }
+        }
 
-  .contact-img {
-    display: block;
-    flex: 1;
-  }
+        .contact-form {
+          width: 100%;
+        }
+      }
 
-  .contact-form {
-    width: 100%;
-  }
+      .contact-img {
+        display: block; 
+        flex: 1;
 
-  .contact-top-img {
-    justify-content: flex-start;
+        img {
+          width: 100%;
+          border-radius: 0.5rem;
+        }
+      }
+    }
 
-    img {
-      width: 180px;
+    .contact-top-img {
+      display: flex;
+      justify-content: flex-start;
+
+      img {
+        width: 180px;
+      }
     }
   }
 
-  .site-header .main-nav .nav-list {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 1.5rem;
-    list-style: none;
-    background: transparent;
-    border: none;
+  .site-header {
+    .main-nav {
+      .nav-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1.5rem;
+        list-style: none;
+        background: transparent;
+        border: none;
+
+        li {
+          border-top: none !important;
+          padding-top: 0 !important;
+        }
+      }
+    }
   }
 
-  .site-header .main-nav .nav-list li {
-    border-top: none !important;
-    padding-top: 0 !important;
+  .site-footer {
+    .footer-inner {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
   }
-
-  .site-footer .footer-inner {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-}
 
 /* Large desktop (min-width: 1440px / 90rem) */
 @media (min-width: 90rem) {
   .container {
-    width: 1200px auto;
+    width: 1200px;
   }
 
   body {
@@ -627,4 +646,3 @@ body {
     background-color: var(--colorBgWhite);
   }
 }
-
