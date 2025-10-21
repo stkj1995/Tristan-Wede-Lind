@@ -101,7 +101,7 @@ body {
         & + li {
           border-top: 1.5px solid var(--colorBgYellow);
           padding-top: 0rem;
-          border-bottom: none;
+          border-bottom: none !important;
         }
       }
     }
@@ -174,12 +174,12 @@ body {
     .tour-card {
       display: flex;
       flex-direction: column;
-      border-bottom: 1.5px solid var(--colorBgYellow);
+      border-bottom: 1.5px solid var(--colorBgYellow) !important;
       padding-bottom: var(--space-m);
       padding: 1rem;
 
       &:last-child {
-        border-bottom: none;
+        border-bottom: none !important;
       }
 
       .icon-text {
@@ -345,14 +345,13 @@ body {
           padding: var(--space-m);
           border-radius: 0.5rem;
           background-color: var(--colorBgCream);
-          border: none;
           border-radius: 0%;
-          border-bottom: 1.5px solid var(--colorBgYellow);
+          border-bottom: 1.5px solid var(--colorBgYellow) !important;
           width: 90%;
           align-self: center;
 
-          &:last-child {
-            border-bottom: none;
+          &:last-of-type {
+            border-bottom: none !important;
           }
         }
 
@@ -382,6 +381,7 @@ body {
         border-radius: 0.5rem;
         padding: var(--space-m);
         background-color: var(--colorBgCream);
+        margin-top: 2rem;
 
         label {
           font-weight: 400;
@@ -590,7 +590,7 @@ body {
           }
         }
 
-        .contact-card:last-child {
+        .contact-left .contact-grid .contact-card:last-of-type {
           border-bottom: 1.5px solid var(--colorBgYellow) !important;
         }
       }
@@ -617,7 +617,7 @@ body {
         gap: 1.5rem;
         list-style: none;
         background: transparent;
-        border: none;
+        border: none !important;
 
         li {
           border-top: none !important;
