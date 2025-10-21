@@ -41,6 +41,7 @@ body {
 }
 
 /* ---------------- HEADER ---------------- */
+/* ---------------- HEADER ---------------- */
 .site-header {
   width: 100%;
   background: var(--colorBgPurple);
@@ -80,7 +81,7 @@ body {
       padding: 0.5rem;
       margin: 0;
       display: flex;
-      flex-direction: column;
+      flex-direction: column; /* MOBILE DEFAULT */
       gap: 0rem;
       text-align: center;
 
@@ -101,6 +102,7 @@ body {
         & + li {
           border-top: 0.1rem solid var(--colorBgYellow);
           padding-top: 0rem;
+          border-bottom: none;
         }
       }
     }
@@ -508,6 +510,7 @@ body {
 
 /* ---------------- MEDIA QUERIES ---------------- */
 /* Tablet and above (min-width: 768px) */
+
 @media (min-width: 768px) {
   body {
     margin-left: 5rem;
@@ -565,47 +568,47 @@ body {
     gap: var(--space-m);
   }
   
-    .contact-wrapper {
-      flex-direction: row;
-      gap: var(--space-l);
-      align-items: flex-start;
+  .contact-wrapper {
+    flex-direction: row;
+    gap: var(--space-l);
+    align-items: flex-start;
 
-      .contact-left {
-        flex: 2; 
+    .contact-left {
+      flex: 2; 
 
-        .contact-grid {
-          .contact-card {
-            border-radius: 0.8rem;
-            padding: var(--space-m);
-          }
-        }
-
-        .contact-form {
-          width: 100%;
+      .contact-grid {
+        .contact-card {
+          border-radius: 0.8rem;
+          padding: var(--space-m);
         }
       }
 
-      .contact-img {
-        display: block; 
-        flex: 1;
-
-        img {
-          width: 100%;
-          border-radius: 0.5rem;
-        }
+      .contact-form {
+        width: 100%;
       }
     }
 
-    .contact-top-img {
-      display: flex;
-      justify-content: flex-start;
+    .contact-img {
+      display: block; 
+      flex: 1;
 
       img {
-        width: 180px;
+        width: 100%;
+        border-radius: 0.5rem;
       }
     }
   }
 
+  .contact-top-img {
+    display: flex;
+    justify-content: flex-start;
+
+    img {
+      width: 180px;
+    }
+  }
+
+  /* NAV DESKTOP FIX */
   .site-header {
     .main-nav {
       .nav-list {
@@ -619,6 +622,7 @@ body {
 
         li {
           border-top: none !important;
+          border-bottom: none !important;
           padding-top: 0 !important;
         }
       }
@@ -632,17 +636,5 @@ body {
       justify-content: space-between;
       align-items: flex-start;
     }
-  }
-
-/* Large desktop (min-width: 1440px / 90rem) */
-@media (min-width: 90rem) {
-  .container {
-    width: 1200px;
-  }
-
-  body {
-    margin-left: 10rem;
-    margin-right: 10rem;
-    background-color: var(--colorBgWhite);
   }
 }
