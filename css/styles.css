@@ -41,7 +41,6 @@ body {
 }
 
 /* ---------------- HEADER ---------------- */
-/* ---------------- HEADER ---------------- */
 .site-header {
   width: 100%;
   background: var(--colorBgPurple);
@@ -67,7 +66,7 @@ body {
         height: 3.6rem;
         border-radius: 50%;
         object-fit: cover;
-        border: 2px solid var(--colorBgWhite);
+        border: 1.5px solid var(--colorBgWhite);
       }   
     }
   }
@@ -100,7 +99,7 @@ body {
         }
 
         & + li {
-          border-top: 0.1rem solid var(--colorBgYellow);
+          border-top: 1.5px solid var(--colorBgYellow);
           padding-top: 0rem;
           border-bottom: none;
         }
@@ -175,7 +174,7 @@ body {
     .tour-card {
       display: flex;
       flex-direction: column;
-      border-bottom: 1px solid var(--colorBgYellow);
+      border-bottom: 1.5px solid var(--colorBgYellow);
       padding-bottom: var(--space-m);
       padding: 1rem;
 
@@ -302,11 +301,15 @@ body {
         content: "";
         display: block;
         width: 95%; 
-        height: 2px;
+        height: 1.5px;
         background-color: var(--colorBgYellow);
         margin: 0.5rem  0;
         border-radius: 1px;
         align-self: center;
+      }
+
+      &:last-child::after {
+        content: none;
       }
     }
   }
@@ -341,24 +344,32 @@ body {
         .contact-card {
           padding: var(--space-m);
           border-radius: 0.5rem;
-          border: 1px solid var(--colorBgYellow);
           background-color: var(--colorBgCream);
+          border: none;
+          border-radius: 0%;
+          border-bottom: 1.5px solid var(--colorBgYellow);
+          width: 90%;
+          align-self: center;
 
-          h4 {
-            margin-bottom: 0.3rem;
-            font-size: 1.1rem;
-            color: var(--colorBgBlack);
+          &:last-child {
+            border-bottom: none;
           }
+        }
 
-          p {
-            margin: 0.3rem 0;
-            line-height: 1.6;
-          }
+        h4 {
+          margin-bottom: 0.3rem;
+          font-size: 1.1rem;
+          color: var(--colorBgBlack);
+        }
 
-          a {
-            color: var(--colorBgBlack);
-            text-decoration: underline;
-          }
+        p {
+          margin: 0.3rem 0;
+          line-height: 1.6;
+        }
+
+        a {
+          color: var(--colorBgBlack);
+          text-decoration: underline;
         }
       }
 
@@ -367,11 +378,10 @@ body {
         display: flex;
         flex-direction: column;
         gap: var(--space-s);
-        border: 1px solid var(--colorBgBlack);
+        border: 1.5px solid var(--colorBgBlack);
         border-radius: 0.5rem;
         padding: var(--space-m);
         background-color: var(--colorBgCream);
-        /* position: relative; */
 
         label {
           font-weight: 400;
@@ -388,7 +398,7 @@ body {
         input,
         textarea {
           padding: 0.6rem;
-          border: 1px solid #ccc;
+          border: 1.5px solid var(--colorBgLightGrey);
           border-radius: 0.4rem;
           font-family: var(--font-sans);
           font-size: 1rem;
@@ -419,17 +429,12 @@ body {
 
     .contact-img {
       display: none;
-
-      img {
-        width: 100%;
-        border-radius: 0.5rem;
-      }
     }
   }
 
   .contact-top-img {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     margin-bottom: var(--space-l);
 
     img {
@@ -545,7 +550,7 @@ body {
       align-items: center;
       gap: 0rem;
       margin: 1rem;
-      border: 1px solid var(--colorBgYellow);
+      border: 1.5px solid var(--colorBgYellow);
       border-radius: 0.8rem;
       padding: var(--space-m);
 
@@ -568,43 +573,37 @@ body {
     gap: var(--space-m);
   }
   
-  .contact-wrapper {
-    flex-direction: row;
-    gap: var(--space-l);
-    align-items: flex-start;
+  .contact {
+    .contact-wrapper {
+      flex-direction: row;
+      gap: var(--space-l);
+      align-items: flex-start;
 
-    .contact-left {
-      flex: 2; 
+      .contact-left {
+        flex: 2; 
 
-      .contact-grid {
-        .contact-card {
-          border-radius: 0.8rem;
-          padding: var(--space-m);
+        .contact-grid {
+          .contact-card {
+            border: 1.5px solid var(--colorBgYellow);
+            border-radius: 0.8rem;
+            padding: var(--space-m);
+          }
+        }
+
+        .contact-card:last-child {
+          border-bottom: 1.5px solid var(--colorBgYellow) !important;
         }
       }
 
-      .contact-form {
-        width: 100%;
+      .contact-img {
+        display: block; 
+        flex: 1;
+
+        img {
+          width: 100%;
+          border-radius: 0.5rem;
+        }
       }
-    }
-
-    .contact-img {
-      display: block; 
-      flex: 1;
-
-      img {
-        width: 100%;
-        border-radius: 0.5rem;
-      }
-    }
-  }
-
-  .contact-top-img {
-    display: flex;
-    justify-content: flex-start;
-
-    img {
-      width: 180px;
     }
   }
 
