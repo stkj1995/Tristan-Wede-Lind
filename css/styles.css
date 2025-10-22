@@ -51,6 +51,10 @@ body {
       font-style: normal;
     }
   }
+
+  .about-books {
+    display: none;
+  }
 }
 
 /* ---------------- HEADER ---------------- */
@@ -661,37 +665,26 @@ body {
   }
 
   /* ABOUT DESK */
-
-   .about .container {
-    display: grid;
-    grid-template-columns: 2fr 1fr; 
-    gap: 2rem;
+ .about .container {
+    display: grid !important;
+    grid-template-columns: 2fr 1fr; /* left main, right aside */
+    gap: 3rem;
     align-items: start;
   }
 
-  .container-text {
-    padding: 0;
-  }
-
-  blockquote {
-    text-align: left;
-    font-size: 1.05rem;
-    margin: var(--space-l) 0;
-  }
-
-  /* Right-side book grid */
-  .about-books {
+  .about-left {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-m);
-    padding: 1rem 0;
+    gap: 2rem; /* spacing between text blocks and blockquote */
   }
 
-  .about-books img {
-    width: 100%;
-    height: auto;
-    border-radius: 0.4rem;
-    display: block;
+  .about-books {
+    grid-template-columns: 1fr; /* vertical stack of books in aside */
+    gap: 1.5rem;
+
+    /* make aside sticky if desired */
+    position: sticky;
+    top: 2rem;
+    align-self: start;
   }
 
   /* BOOKS DESK */
@@ -724,8 +717,6 @@ body {
       }
     }
   }
-
-  
   
   /* TOUR DESK */
   .tour-grid {
