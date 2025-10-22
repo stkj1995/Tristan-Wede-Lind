@@ -17,6 +17,7 @@ body {
   background: var(--colorBgCream);
 }
 
+/* LANGUAGE */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -28,6 +29,7 @@ body {
   border: 0;
 }
 
+/* ABOUT */
 .container {
   width: min(1100px, 100%);
   margin: 0 auto;
@@ -565,7 +567,7 @@ body {
     background-color: var(--colorBgCream);
   }
 
-   .hero-inner {
+  .hero-inner {
     display: flex;
     flex-direction: row;     
     justify-content: center;   
@@ -588,7 +590,7 @@ body {
   .hero-center {
     flex-direction: column;
     justify-content: center;
-   }
+  }
 
   .site-header .header-inner {
     display: flex;
@@ -658,6 +660,40 @@ body {
     }
   }
 
+  /* ABOUT DESK */
+
+   .about .container {
+    display: grid;
+    grid-template-columns: 2fr 1fr; 
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .container-text {
+    padding: 0;
+  }
+
+  blockquote {
+    text-align: left;
+    font-size: 1.05rem;
+    margin: var(--space-l) 0;
+  }
+
+  /* Right-side book grid */
+  .about-books {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-m);
+    padding: 1rem 0;
+  }
+
+  .about-books img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.4rem;
+    display: block;
+  }
+
   /* BOOKS DESK */
   .books {
     .book-grid {
@@ -688,6 +724,8 @@ body {
       }
     }
   }
+
+  
   
   /* TOUR DESK */
   .tour-grid {
