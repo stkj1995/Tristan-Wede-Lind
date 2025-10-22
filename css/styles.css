@@ -565,6 +565,23 @@ body {
     background-color: var(--colorBgCream);
   }
 
+   .hero-inner {
+    flex-direction: row; /* side by side */
+    justify-content: center; /* center the whole hero section horizontally */
+    align-items: center;
+    text-align: left; /* text on left */
+    gap: 4rem; /* space between text and image */
+  }
+
+  .hero-txt {
+    max-width: 500px; /* optional, keeps text from stretching too wide */
+  }
+
+  .hero-inner-img img.book-cover {
+    width: 200px; /* bigger on desktop */
+    height: auto;
+  }
+
  /* Header inner (top row: image + text + language) */
   .site-header .header-inner {
     display: flex;
