@@ -7,6 +7,7 @@
     <title>Tristan Wede Lind — Web Developer and Author</title>
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/styles.css">
+    <script type="module" src="js/script.js"></script>
 </head>
 
 <body>
@@ -15,6 +16,11 @@
             <div class="brand">
                 <h1>Tristan Wede Lind</h1>
                 <p class="tagline">Web Developer and Author</p>
+                <label for="languageSwitcher" class="visually-hidden">Vælg sprog</label>
+                <select id="languageSwitcher">
+                    <option value="en">EN</option>
+                    <option value="da">DA</option>
+                </select>
             </div>
 
             <nav class="main-nav" aria-label="Main navigation">
@@ -32,7 +38,7 @@
         <!-- Hero section -->
         <section id="hero" class="hero">
             <div class="hero-inner">
-                <button class="cta">NEW RELEASE</button>
+                <button class="cta" id="newReleaseBtn">NEW RELEASE</button>
                 <h2 class="book-title">Advanced PHP: From Zero to Hero</h2>
                 <p class="meta">&copy; 2023 KEA Publishing</p>
                 <div class="hero-inner-img">

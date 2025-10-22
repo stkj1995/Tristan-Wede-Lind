@@ -17,6 +17,17 @@ body {
   background: var(--colorBgCream);
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
 .container {
   width: min(1100px, 100%);
   margin: 0 auto;
@@ -59,7 +70,7 @@ body {
       align-items: flex-start;
       padding-left: 1rem;
       color: var(--colorBgYellow);
-      line-height: 0.8rem;
+      line-height: 1.8rem;
       font-weight: bold;
 
       .brand-img {
@@ -121,13 +132,31 @@ body {
 
   .cta {
     background-color: var(--colorBgRed);
+    
     color: var(--colorBgWhite);
-    border-style: none !important;
-    border-radius: 0.5rem;
+    border: 1px solid var(--colorBgYellow) !important;
+    border-radius: 0.4rem;
     padding: 1rem;
     font-size: 1rem;
     font-weight: bold;
   }
+
+    .cta:hover {
+    background-color: var(--colorBgPurple);
+    border-color: var(--colorBgRed);
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+
+    #languageSwitcher {
+    background-color: var(--colorBgBlue);
+    color: var(--colorBgWhite);
+    border: 1px solid var(--colorBgYellow);
+    border-radius: 0.4rem;
+    padding: 0.3rem 0.5rem;
+    font-size: 0.9rem;
+  }
+
 
   .book-title {
     font-style:italic;
@@ -525,7 +554,7 @@ body {
   }
 
   .hero-inner {
-    flex-direction: row; 
+    flex-direction: column; 
     justify-content: space-between;
     align-items: center;
     text-align: left;
