@@ -93,9 +93,15 @@ body {
         }
       }
 
-      h1,
+      h1{
+        font-size: 1.5rem;
+        font-weight:600;
+      }
+
       .tagline {
-        margin: 0;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 0.8rem;
+        font-weight: 600;
       }
 
       #languageSwitcher {
@@ -124,6 +130,8 @@ body {
           display: block;
           padding: 0.5rem;
           transition: background 0.3s ease;
+          font-family: 'Courier New', Courier, monospace;
+          font-weight: 500;
 
           &:hover {
             background: var(--colorBgGrey);
@@ -199,6 +207,7 @@ body {
   padding: 0;
 
   h3 {
+    font-family: 'Courier New', Courier, monospace;
     font-size: 1.6rem;
     margin-bottom: var(--space-m);
     text-align: left;
@@ -302,6 +311,7 @@ body {
   padding: 0;
 
   h3 {
+    font-family: 'Courier New', Courier, monospace;
     font-size: 1.6rem;
     margin-bottom: var(--space-m);
     text-align: left;
@@ -369,6 +379,7 @@ body {
   padding: 0;
 
   h3 {
+    font-family: 'Courier New', Courier, monospace;
     font-size: 1.6rem;
     margin-bottom: var(--space-m);
     text-align: left;
@@ -609,7 +620,7 @@ body {
     .brand {
       flex-direction: row;
       align-items: center;
-      gap: 18rem;
+      gap: 16rem;
 
       .tristan-img {
         display: block; 
@@ -622,9 +633,16 @@ body {
         }
       }
 
-      h1,
+      h1{
+        font-size: 3rem;
+        font-weight: 600;
+        text-align: center;
+      }
+
       .tagline {
-        margin: 0;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 1.5rem;
+        font-weight: 600;
         text-align: center;
       }
 
@@ -814,14 +832,16 @@ body {
   .site-header .main-nav .nav-list a {
     display: inline-block;
     text-decoration: none;
-    font-weight: 600;
-    color: var(--colorTextDark, #000);
+    font-weight: 500;
+    color: var(--colorBgBlack);
     padding: 0.5rem 0;
     transition: color 0.2s ease;
+    font-size: 1.6rem;
+    font-family: 'Courier New', Courier, monospace;
   }
 
   .site-header .main-nav .nav-list a:hover {
-    color: var(--colorAccent, #007bff);
+    color: var(--colorBgWhite);
   }
 
   /* FOOTER DESK */
