@@ -36,6 +36,8 @@ body {
 
   .container-text {
     padding: 1rem;
+    padding-bottom: 0;
+    padding-top: 0;
   }
 
   blockquote {
@@ -665,26 +667,47 @@ body {
   }
 
   /* ABOUT DESK */
+
+  .about {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
  .about .container {
+    width: min(1100px, 100%);
+    margin: 2.5rem auto; 
     display: grid !important;
-    grid-template-columns: 2fr 1fr; /* left main, right aside */
-    gap: 3rem;
+    grid-template-columns: 2fr 2fr;
+    gap: 2rem;
     align-items: start;
+    justify-content: center;
   }
 
   .about-left {
     display: grid;
-    gap: 2rem; /* spacing between text blocks and blockquote */
+    gap: 1rem;
   }
 
   .about-books {
-    grid-template-columns: 1fr; /* vertical stack of books in aside */
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);  
     gap: 1.5rem;
+    justify-content: center; 
+    align-items: center;
+  }
 
-    /* make aside sticky if desired */
-    position: sticky;
-    top: 2rem;
-    align-self: start;
+  .about-books .about-img img {
+    display: block;
+    width: 95%;
+    height: auto;       
+    object-fit: cover;   
+    border-radius: 0;
+  }
+
+  .about-txt {
+    text-align: center;
   }
 
   /* BOOKS DESK */
