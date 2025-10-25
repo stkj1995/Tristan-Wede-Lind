@@ -393,6 +393,7 @@ body {
     flex-direction: column;
     gap: var(--space-l);
 
+    /* ---------- LEFT SECTION ---------- */
     .contact-left {
       flex: 1;
 
@@ -400,6 +401,7 @@ body {
         display: flex;
         flex-direction: column;
         gap: var(--space-l);
+        margin: 2rem;
 
         .contact-card {
           padding: var(--space-m);
@@ -429,6 +431,7 @@ body {
         }
       }
 
+      /* ---------- FORM ---------- */
       .contact-form {
         width: 100%;
         display: flex;
@@ -439,17 +442,27 @@ body {
         padding: var(--space-m);
         background-color: var(--colorBgCream);
         margin-top: 2rem;
+        position: relative;
+        padding-top: 2.5rem;
+
+        /* ---- Request booking label ---- */
+        .request-booking {
+          position: absolute;
+          top: 0;
+          left: 0;
+          transform: translateY(-50%); 
+          background-color: var(--colorBgCream);
+          font-size: 1.1rem;
+          font-weight: 600;
+          margin-left: 2rem;
+          color: var(--colorBgBlack);
+          border-top-left-radius: 0.4rem;
+          border-top-right-radius: 0.4rem;
+          padding: 1rem;
+        }
 
         label {
           font-weight: 400;
-        }
-
-        .request-booking {
-          padding: 0.6rem var(--space-s);
-          background-color: var(--colorBgCream);
-          position: relative;
-          font-size: 1.1rem;
-          margin-bottom: var(--space-s);
         }
 
         input,
@@ -485,11 +498,13 @@ body {
       }
     }
 
+    /* ---------- RIGHT IMAGE ---------- */
     .contact-img {
       display: none !important;
     }
   }
 
+  /* ---------- TOP IMAGE ---------- */
   .contact-top-img {
     display: flex;
     justify-content: left;
@@ -501,6 +516,7 @@ body {
     }
   }
 }
+
 
 /* ---------------- FOOTER ---------------- */
 .site-footer {
@@ -770,39 +786,72 @@ body {
   
   /* CONTACT DESK */
   .contact {
+    h3 {
+      font-size: 2rem;
+      text-align: left;
+    }
+
     .contact-wrapper {
-        flex-direction: row;
-        gap: var(--space-l);
-        align-items: flex-start;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: center;
+      gap: var(--space-xl);
 
-        .contact-left {
-          flex: 2;
+      .contact-left {
+        flex: 1;
 
-          .contact-grid .contact-card {
-            border: 1.5px solid var(--colorBgYellow);
-            border-radius: 0.8rem;
-            padding: var(--space-m);
-          }
+        .contact-grid {
+          flex-direction: column;
+          gap: var(--space-l);
 
-          .contact-grid .contact-card:last-of-type {
-            border-bottom: 1.5px solid var(--colorBgYellow) !important;
+          .contact-card {
+            border: none;
+            border-bottom: 1.5px solid var(--colorBgYellow);
           }
         }
 
-        .contact-img {
-          display: block;
-          flex: 1;
+        /* Form aligned visually with image section */
+        .contact-form {
+          max-width: 600px;
+          margin-top: var(--space-xl);
+          border: 1.5px solid var(--colorBgBlack);
+          padding: var(--space-l);
+          position: relative;
+
+          .request-booking {
+            margin-bottom: var(--space-s);
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-align: left;
+            padding-left: 0; 
+          }
+        }
+      }
+
+      .contact-img {
+        display: flex !important;
+        flex: 1;
+        justify-content: center;
+        align-items: flex-start;
 
         img {
           width: 100%;
+          max-width: 450px;
           border-radius: 0.5rem;
-          display: block;
-          max-width: 500px;
-          margin: 2rem auto;
+          margin-top: var(--space-xl);
         }
       }
     }
-  } 
+
+    .contact-top-img {
+      justify-content: center;
+      margin-bottom: var(--space-xl);
+
+      img {
+        width: 200px;
+      }
+    }
+  }
 
   /* NAV DESK */
   .site-header .main-nav {
