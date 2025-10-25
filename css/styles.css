@@ -396,39 +396,36 @@ body {
     .contact-grid {
       flex: 1;
 
-      .contact-left {
+      .contact-left .contact-card {
         display: flex;
         flex-direction: column;
-        gap: var(--space-l);
         margin: 2rem;
+        padding: var(--space-m);
+        background-color: var(--colorBgCream);
+        border-radius: 0;
+        border-bottom: 1px solid var(--colorBgYellow);
+        
+        .contact-left .contact-card:last-child {
+          border-bottom: none; 
+        }
 
-        .contact-card {
-          padding: var(--space-m);
-          background-color: var(--colorBgCream);
-          border-radius: 0;
-          border-bottom: 1.5px solid var(--colorBgYellow) !important;
+        h4 {
+          margin-bottom: 0.3rem;
+          font-size: 1.1rem;
+          color: var(--colorBgBlack);
+        }
 
-          &:last-of-type {
-            border-bottom: none;
-          }
+        p {
+          margin: 0.3rem 0;
+          line-height: 1.6;
+        }
 
-          h4 {
-            margin-bottom: 0.3rem;
-            font-size: 1.1rem;
-            color: var(--colorBgBlack);
-          }
-
-          p {
-            margin: 0.3rem 0;
-            line-height: 1.6;
-          }
-
-          a {
-            color: var(--colorBgBlack);
-            text-decoration: underline;
-          }
+        a {
+          color: var(--colorBgBlack);
+          text-decoration: underline;
         }
       }
+    }
 
       /* ---------- FORM ---------- */
       .contact-form {
@@ -514,7 +511,7 @@ body {
       border-radius: 50%;
     }
   }
-}
+
 
 
 /* ---------------- FOOTER ---------------- */
@@ -798,17 +795,13 @@ body {
       .contact-grid {
         flex: 4;
 
-        .contact-left {
-          flex-direction: column;
-          gap: var(--space-l);
-
-          .contact-card {
-            display: block;
-            border: 1px solid var(--colorBgYellow);
-            border-radius: 1rem;
-            border-bottom: 1.5px solid var(--colorBgYellow) !important;
-          }
+        .contact-left .contact-card {
+          flex-direction: column;        
+          border: 1px solid var(--colorBgYellow);
+          border-radius: 1rem;
+          border-bottom: 1.5px solid var(--colorBgYellow);
         }
+      }
 
         /* Form aligned visually with image section */
         .contact-form {
@@ -852,7 +845,7 @@ body {
         width: 200px;
       }
     }
-  }
+
 
   /* NAV DESK */
   .site-header .main-nav {
