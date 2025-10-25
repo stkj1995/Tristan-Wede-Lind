@@ -185,7 +185,6 @@ body {
     font-size: 0.9rem;
   }
 
-
   .book-title {
     font-style:italic;
     font-weight: 500;
@@ -410,7 +409,7 @@ body {
           border-bottom: 1.5px solid var(--colorBgYellow) !important;
 
           &:last-of-type {
-            border-bottom: none !important;
+            border-bottom: none;
           }
 
           h4 {
@@ -702,7 +701,6 @@ body {
   }
 
   /* ABOUT DESK */
-
   .about {
     display: flex;
     justify-content: center;
@@ -805,7 +803,8 @@ body {
           gap: var(--space-l);
 
           .contact-card {
-            border: none;
+            border: 1px solid var(--colorBgYellow);
+            border-radius: 1rem;
             border-bottom: 1.5px solid var(--colorBgYellow);
           }
         }
@@ -835,7 +834,8 @@ body {
         align-items: flex-start;
 
         img {
-          width: 100%;
+          width: 100% auto;
+          height: 100% auto;
           max-width: 450px;
           border-radius: 0.5rem;
           margin-top: var(--space-xl);
