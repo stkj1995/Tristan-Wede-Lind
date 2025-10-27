@@ -200,7 +200,6 @@ body {
   }
 }
 
-
 /* ---------------- TOUR ---------------- */
 .tour {
   padding: 0;
@@ -303,7 +302,6 @@ body {
     }
   }
 }
-
 
 /* ---------------- BOOKS ---------------- */
 .books {
@@ -777,6 +775,16 @@ body {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(7, auto);
     gap: var(--space-m);
+  }
+
+  .tour-card {
+    border: 1.5px solid var(--colorBgYellow) !important; 
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+  }
+
+  .tour-card:last-child {
+    border-bottom: 1.5px solid var(--colorBgYellow) !important;
   }
   
   /* CONTACT DESK */
