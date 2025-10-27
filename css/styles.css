@@ -397,7 +397,6 @@ body {
       .contact-left .contact-card {
         display: flex;
         flex-direction: column;
-        margin: 2rem;
         padding: var(--space-m);
         background-color: var(--colorBgCream);
         border-radius: 0;
@@ -509,8 +508,6 @@ body {
       border-radius: 50%;
     }
   }
-
-
 
 /* ---------------- FOOTER ---------------- */
 .site-footer {
@@ -789,71 +786,80 @@ body {
   
   /* CONTACT DESK */
   .contact {
-    h3 {
-      font-size: 2rem;
-      text-align: left;
-    }
+  h3 {
+    font-size: 2rem;
+    text-align: left;
+    margin-bottom: var(--space-m);
+  }
 
-    .contact-wrapper {
-      flex-direction: row;
-      align-items: flex-start;
-      justify-content: center;
-      gap: var(--space-l);
+  .contact-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: var(--space-m);
+    width: 110%;
+  }
 
-      .contact-grid {
-        flex: 4;
+  /* venstre kolonne med cards + form */
+  .contact-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-l);
+    flex: 3;
+    min-width: 500px;
+  }
 
-        .contact-left .contact-card {
-          flex-direction: column;        
-          border: 1px solid var(--colorBgYellow);
-          border-radius: 1rem;
-          border-bottom: 1.5px solid var(--colorBgYellow);
-        }
-      }
+  .contact-left .contact-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--colorBgYellow);
+    border-radius: 0.6rem;
+    padding: var(--space-s); /* giver luft inde i kortet */
+  }
 
-        /* Form aligned visually with image section */
-        .contact-form {
-          max-width: 600px;
-          margin-top: var(--space-l);
-          border: 1.5px solid var(--colorBgBlack);
-          padding: var(--space-l);
-          position: relative;
+  .contact-top-img {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: var(--space-s);
+  }
 
-          .request-booking {
-            margin-bottom: var(--space-s);
-            font-size: 1.2rem;
-            font-weight: 600;
-            text-align: left;
-            padding-left: 0; 
-          }
-        }
-      }
+  .contact-top-img img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 0.4rem; /* rund billedets hjørner */
+    display: block;
+  }
 
-      .contact-img {
-        display: flex !important;
-        flex: 2;
-        justify-content: center;
-        align-items: flex-start;
+  .contact-form {
+    margin-top: var(--space-m);
+    border: 1.5px solid var(--colorBgBlack);
+    background-color: var(--colorBgLight);
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    border-radius: 0.4rem;
+    padding: var(--space-m);
+  }
 
-        img {
-          object-fit: cover;
-          width: 100%;
-          height: auto;
-          max-width: 1000px;
-          border-radius: 0.5rem;
-          margin-top: var(--space-l);
-        }
-      }
-    }
+  /* højre billede-sektion */
+  .contact-img {
+    display: flex !important;
+    flex: 2;
+    min-width: 320px;
+    justify-content: center;
+    align-items: flex-start;
+  }
 
-    .contact-top-img {
-      justify-content: left;
-
-      img {
-        width: 200px;
-      }
-    }
-
+  .contact-img img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 1000px;
+    object-fit: cover;
+  }
+  }
 
   /* NAV DESK */
   .site-header .main-nav {
