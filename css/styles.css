@@ -797,7 +797,7 @@ body {
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
-    gap: var(--space-m);
+    gap: var(--space-s);
     width: 110%;
   }
 
@@ -806,16 +806,23 @@ body {
     display: flex;
     flex-direction: column;
     gap: var(--space-l);
-    flex: 3;
-    min-width: 500px;
+    min-width: 600px;
   }
 
   .contact-left .contact-card {
     display: flex;
     flex-direction: column;
     border: 1px solid var(--colorBgYellow);
-    border-radius: 0.6rem;
-    padding: var(--space-s); /* giver luft inde i kortet */
+    border-radius: 0.6rem !important;
+    padding: var(--space-s);
+    margin: 1rem;
+  }
+
+  .contact-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-m); 
   }
 
   .contact-top-img {
@@ -825,10 +832,10 @@ body {
   }
 
   .contact-top-img img {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
-    border-radius: 0.4rem; /* rund billedets hjørner */
+    border-radius: 50%;
     display: block;
   }
 
@@ -848,15 +855,16 @@ body {
     display: flex !important;
     flex: 2;
     min-width: 320px;
-    justify-content: center;
+    justify-content: left;
     align-items: flex-start;
+    margin: 1rem;
   }
 
   .contact-img img {
     display: block;
     width: 100%;
     height: auto;
-    max-width: 1000px;
+    max-width: 1200px;
     object-fit: cover;
   }
   }
