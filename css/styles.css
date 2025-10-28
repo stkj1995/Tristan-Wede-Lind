@@ -403,6 +403,7 @@ body {
         padding: var(--space-m);
         background-color: var(--colorBgCream);
         border-radius: 0;
+        margin: 2rem;
         border-bottom: 1px solid var(--colorBgYellow);
         
         .contact-left .contact-card:last-child {
@@ -830,19 +831,7 @@ body {
     }
 
     .contact-img {
-      display: flex;
-      flex: 1; 
-      min-width: 300px;
-      justify-content: flex-start;
-      align-items: flex-start;
-
-      img {
-        display: block;
-        width: 100%;
-        height: auto;
-        max-width: 500px;
-        object-fit: cover;
-      }
+      display: none;
     }
   }
 
@@ -896,6 +885,7 @@ body {
     }
   }
 }
+
 
 /* ---------------- MEDIA QUERIES ---------------- */
 /* DESKTOP and above (min-width: 1024px) */
@@ -1102,18 +1092,19 @@ body {
   }
 
   .contact-img {
-    display: flex;
+    display: flex !important; 
     flex: 1.5;
     justify-content: flex-start;
     align-items: flex-start;
     margin: 1rem;
+  }
 
-    img {
-      width: 100%;
-      max-width: 900px;
-      height: auto;
-      object-fit: cover;
-    }
+  .contact-img img {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    object-fit: cover;
+    margin-top: 1rem;
   }
 
   /* ---------- FOOTER desk ---------- */
