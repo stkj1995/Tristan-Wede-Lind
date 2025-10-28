@@ -201,8 +201,6 @@ languageSwitcher.addEventListener("change", e => {
   if (footerRights) footerRights.textContent = t.footerRights;
 });
 
-
-
 // ---------------- NEW RELEASE BUTTON ----------------
 const newReleaseBtn = document.getElementById("newReleaseBtn");
 
